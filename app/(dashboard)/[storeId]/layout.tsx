@@ -1,4 +1,4 @@
-import { auth } from "@clerk/nextjs";
+import { SignOutButton, auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 import prismadb from "@/lib/prismadb";
@@ -29,7 +29,10 @@ export default async function DashboardLayout({
 
   return (
     <>
-      <div>This will be a navbar</div>
+      <div>
+        <SignOutButton />
+        <p>This will be a navbar</p>
+      </div>
       {children}
     </>
   );
