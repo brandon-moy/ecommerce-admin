@@ -1,11 +1,19 @@
-import { Button } from "@/components/ui/button";
+"use client";
+import { Modal } from "@/components/ui/modal";
+import { UserButton } from "@clerk/nextjs/app-beta";
 
 export default function SetupPage() {
   return (
     <div className="p-4">
-      <Button size="default" variant="outline">
-        Click me
-      </Button>
+      <Modal
+        isOpen
+        onClose={() => {}}
+        title="Test"
+        description="Test description"
+      >
+        Children
+      </Modal>
+      {/* <UserButton afterSignOutUrl="/" /> */}
     </div>
   );
 }
