@@ -12,6 +12,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from "@/components/ui/form";
 import { Button } from "@/components/ui/button";
 
@@ -53,6 +54,7 @@ export const StoreModal = () => {
                     <FormControl>
                       <Input placeholder="eCommerce" {...field} />
                     </FormControl>
+                    <FormMessage />
                   </FormItem>
                 )}
               />
