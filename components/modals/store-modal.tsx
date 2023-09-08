@@ -3,6 +3,7 @@
 import * as z from "zod";
 import axios from "axios";
 import { useState } from "react";
+import { toast } from "react-hot-toast";
 import { useForm } from "react-hook-form";
 import { Input } from "@/components/ui/input";
 import { Modal } from "@/components/ui/modal";
@@ -37,9 +38,9 @@ export const StoreModal = () => {
     try {
       setloading(true);
       const response = await axios.post("/api/stores", values);
-      console.log(response.data);
+      toast.success("Store created.");
     } catch (error) {
-      console.log(error);
+      toast.error("Something went wrong.");
     } finally {
       setloading(false);
     }
