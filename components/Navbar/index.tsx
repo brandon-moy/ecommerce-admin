@@ -1,5 +1,5 @@
 import { UserButton } from "@clerk/nextjs";
-import MainNav from "@/components/main-nav";
+import MainNav from "@/components/Navbar/main-nav";
 
 const Navbar = () => {
   return (
