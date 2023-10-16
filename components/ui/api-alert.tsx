@@ -1,3 +1,5 @@
+"use client";
+
 import toast from "react-hot-toast";
 import { Copy, Server } from "lucide-react";
 import { Button } from "@/components/ui/button";
