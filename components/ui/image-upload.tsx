@@ -71,6 +71,7 @@ const ImageUplaod: React.FC<ImageUplaodProps> = ({
               onClick={onClick}
             >
               <ImagePlus className="w-4 h-4 mr-2" />
+              Upload an image
             </Button>
           );
         }}
