@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 
 export async function GET(
   req: Request,
-  { params }: { params: { storeId: string; billboardId: string } }
+  { params }: { params: { billboardId: string } }
 ) {
   try {
     if (!params.billboardId) {

@@ -17,14 +17,12 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import useOrigin from "@/hooks/use-origin";
 import Heading from "@/components/ui/heading";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import AlertModal from "@/components/modals/alert-modal";
-import ApiAlert from "@/components/ui/api-alert";
 import ImageUplaod from "@/components/ui/image-upload";
+import AlertModal from "@/components/modals/alert-modal";
 
 interface BillboardFormProps {
   initialData: Billboard | null;
@@ -40,7 +38,6 @@ type BillboardFormValues = z.infer<typeof formSchema>;
 const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
   const params = useParams();
   const router = useRouter();
-  const origin = useOrigin();
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -71,6 +68,7 @@ const BillboardForm: React.FC<BillboardFormProps> = ({ initialData }) => {
         await axios.post(`/api/${params.storeId}/billboards`, data);
       }
       router.refresh();
+      router.push(`/${params.storeId}/billboards`);
       toast.success(toastMessage);
     } catch (error) {
       toast.error("Something went wrong.");
