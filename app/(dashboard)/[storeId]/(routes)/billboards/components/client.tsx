@@ -1,14 +1,14 @@
 "use client";
 
 import { Plus } from "lucide-react";
-import { Billboard } from "@prisma/client";
+import { BillboardColumn } from "./columns";
 import { useParams, useRouter } from "next/navigation";
 import Heading from "@/components/ui/heading";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 interface BillboardClientProps {
-  data: Billboard[];
+  data: BillboardColumn[];
 }
 
 const BillboardClient: React.FC<BillboardClientProps> = ({ data }) => {
