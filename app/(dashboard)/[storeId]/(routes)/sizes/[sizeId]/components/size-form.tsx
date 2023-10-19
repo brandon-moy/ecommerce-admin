@@ -21,7 +21,6 @@ import Heading from "@/components/ui/heading";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import ImageUplaod from "@/components/ui/image-upload";
 import AlertModal from "@/components/modals/alert-modal";
 
 interface SizeFormProps {
@@ -83,7 +82,7 @@ const SizeForm: React.FC<SizeFormProps> = ({ initialData }) => {
       router.push(`/${params.storeId}/sizes`);
       toast.success("Size deleted.");
     } catch (error) {
-      toast.error("Make sure you removed all products using this size.");
+      toast.error("Make sure you removed all products using this size first.");
     } finally {
       setLoading(false);
       setOpen(false);
