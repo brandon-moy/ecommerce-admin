@@ -169,11 +169,29 @@ const ProductForm: React.FC<ProductFormProps> = ({ initialData }) => {
               name="name"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Label</FormLabel>
+                  <FormLabel>Name</FormLabel>
                   <FormControl>
                     <Input
                       disabled={loading}
                       placeholder="Product name"
+                      {...field}
+                    />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            <FormField
+              control={form.control}
+              name="price"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Price</FormLabel>
+                  <FormControl>
+                    <Input
+                      type="number"
+                      disabled={loading}
+                      placeholder="9.99"
                       {...field}
                     />
                   </FormControl>
