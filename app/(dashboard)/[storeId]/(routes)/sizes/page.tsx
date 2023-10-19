@@ -1,6 +1,6 @@
 import { format } from "date-fns";
 import prismadb from "@/lib/prismadb";
-import BillboardClient from "./components/client";
+import SizesClient from "./components/client";
 import { SizeColumn } from "./components/columns";
 
 const Sizes = async ({ params }: { params: { storeId: string } }) => {
@@ -23,7 +23,7 @@ const Sizes = async ({ params }: { params: { storeId: string } }) => {
   return (
     <div className="flex flex-col">
       <div className="flex-1 p-8 pt-6 space-y-4">
-        <BillboardClient data={formattedSizes} />
+        <SizesClient data={formattedSizes} />
       </div>
     </div>
   );
