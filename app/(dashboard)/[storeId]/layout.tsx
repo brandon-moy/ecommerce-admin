@@ -1,4 +1,4 @@
-import { SignOutButton, auth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs";
 import { redirect } from "next/navigation";
 
 import prismadb from "@/lib/prismadb";
