@@ -12,7 +12,7 @@ Try out the application live <a href="https://ecommerce-admin.brandonmoy.com/">h
 
 ## 💻 Technologies Used
 
-Front=End:
+Front-End:
 
 - JavaScript
 - JSX
@@ -22,7 +22,7 @@ Front=End:
 - TailwindCSS
 - TypeScript
 
-Back=End:
+Back-End:
 
 - Clerk
 - Cloudinary
