@@ -39,18 +39,41 @@ Additional Tools:
 
 ## Features
 
-Users can sign in/up using their Google accounts
-Users can create an entry
-Users can view a list of entries
-Users can edit their entries
-Users can delete their entries
-Users can view a specific entries details
-Users can view more projects from the project creator on the details page
-Users can filter projects on the home page
-Users can view a user profile
-Users can update their account's image, GitHub url, and LinkedIn url
+### Overall Store Features
+
+- Users can create a store
+- Users can view specific details of the store
+- Users can update store name
+- Users can delete a store
+- Users can toggle between light, dark, and system preferred mode
+
+### Individual Store Features
+
+- Users can view the dashboard (displays revenue, sales, products in stock, and an overview graph)
+- Users can view orders and whether they are paid or not
+- Users can view API endpoints for the below CRUD features
+
+#### Create, Read, Update, and Delete Features available on:
+
+- Billboards
+- Categories
+- Sizes
+- Colors
+- Products
 
 ## Preview
+
+### Users can view the dashboard (dark mode)
+
+![View dashboard](/public/dashboard.png "View dashboard")
+
+### Users can create sizes for their products
+
+![Create size](/public/sizes.gif "Creating a size")
+
+### Users can create a product
+
+![Create product](/public/products.gif "Creating a product")
 
 ## Getting Started
 
