@@ -33,10 +33,10 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
               <CardTitle className="text-sm font-medium">
                 Total Revenue
               </CardTitle>
-              <DollarSign className="w-4 h-4 text-muted-foreground" />
+              <DollarSign className="hidden w-4 h-4 sm:block text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">
+              <div className="text-xl font-bold sm:text-2xl">
                 {formatter.format(totalRevenue)}
               </div>
             </CardContent>
@@ -44,10 +44,12 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
           <Card>
             <CardHeader className="flex flex-row items-center justify-between pb-2 space-y-0">
               <CardTitle className="text-sm font-medium">Sales</CardTitle>
-              <CreditCard className="w-4 h-4 text-muted-foreground" />
+              <CreditCard className="hidden w-4 h-4 sm:block text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">+{salesCount}</div>
+              <div className="pt-5 text-xl font-bold sm:pt-0 sm:text-2xl">
+                +{salesCount}
+              </div>
             </CardContent>
           </Card>
           <Card>
@@ -55,10 +57,10 @@ const DashboardPage: React.FC<DashboardPageProps> = async ({ params }) => {
               <CardTitle className="text-sm font-medium">
                 Products In Stock
               </CardTitle>
-              <Package className="w-4 h-4 text-muted-foreground" />
+              <Package className="hidden w-4 h-4 sm:block text-muted-foreground" />
             </CardHeader>
             <CardContent>
-              <div className="text-2xl font-bold">{stockCount}</div>
+              <div className="text-xl font-bold sm:text-2xl">{stockCount}</div>
             </CardContent>
           </Card>
         </div>
