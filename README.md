@@ -1,3 +1,5 @@
+<sub>\*\*3/28/24 - change made to move from PlanetScale to Vercel due to deprecation of Hobby tier with PlanetScale</sub>
+
 # eCommerce Admin
 
 An admin dashboard for users to add and edit products as well as see data for their ecommerce store.
@@ -26,7 +28,8 @@ Back-End:
 
 - Clerk
 - Cloudinary
-- PlanetScale
+- ~~PlanetScale~~
+- Vercel
 - Prisma
 
 Additional Tools:
@@ -81,7 +84,8 @@ Things you will need:
 
 - Clerk account
 - Cloudinary account (for image storing)
-- PlanetScale account
+- ~~PlanetScale account~~
+- Vercel account
 - Stripe account
 
 1. Clone the repository
@@ -102,13 +106,17 @@ npm install
 cp .env.example .env
 ```
 
-4. Update the TOKEN secrets!
+4. Create the project in Vercel and link it to the GitHub repository.
+
+5. Create the storage DB (Postgres) and connect it to the project in Vercel. This will automatically populate the environment variables in the Vercel project that you will copy to your local .env file.
+
+6. Update the TOKEN secrets!
 
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY and CLERK_SECRET_KEY from Clerk.
 
 The SIGN_IN_URL through to SIGN_UP_URL can all stay the same.
 
-DATA_URL from PlanetScale.
+POSTGRES_PRISMA_URL and POSTGRES_URL_NON_POOLING from Vercel (you can find this in your connected projects Settings -> Environment Variables)
 
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME from Cloudinary.
 
@@ -116,10 +124,10 @@ STRIPE_API_KEY from Stripe.
 
 While developing, FRONTEND_STORE_URL can stay the same as you will need to have two applications running. The admin will be the first on localhost:3000 and when you start the second application, it will run on localhost:3001 as :3000 is in use.
 
-5. Start up the development server
+7. Start up the development server
 
 ```
 npm run dev
 ```
 
-6. Open the project in the browser at localhost:3000!
+8. Open the project in the browser at localhost:3000!
