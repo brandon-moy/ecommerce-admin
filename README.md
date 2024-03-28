@@ -106,7 +106,11 @@ npm install
 cp .env.example .env
 ```
 
-4. Update the TOKEN secrets!
+4. Create the project in Vercel and link it to the GitHub repository.
+
+5. Create the storage DB (Postgres) and connect it to the project in Vercel. This will automatically populate the environment variables in the Vercel project that you will copy to your local .env file.
+
+6. Update the TOKEN secrets!
 
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY and CLERK_SECRET_KEY from Clerk.
 
@@ -120,10 +124,10 @@ STRIPE_API_KEY from Stripe.
 
 While developing, FRONTEND_STORE_URL can stay the same as you will need to have two applications running. The admin will be the first on localhost:3000 and when you start the second application, it will run on localhost:3001 as :3000 is in use.
 
-5. Start up the development server
+7. Start up the development server
 
 ```
 npm run dev
 ```
 
-6. Open the project in the browser at localhost:3000!
+8. Open the project in the browser at localhost:3000!
