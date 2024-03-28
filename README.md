@@ -1,3 +1,5 @@
+<sub>\*\*3/28/24 - change made to move from PlanetScale to Vercel due to deprecation of Hobby tier with PlanetScale</sub>
+
 # eCommerce Admin
 
 An admin dashboard for users to add and edit products as well as see data for their ecommerce store.
@@ -26,7 +28,8 @@ Back-End:
 
 - Clerk
 - Cloudinary
-- PlanetScale
+- ~~PlanetScale~~
+- Vercel
 - Prisma
 
 Additional Tools:
@@ -81,7 +84,8 @@ Things you will need:
 
 - Clerk account
 - Cloudinary account (for image storing)
-- PlanetScale account
+- ~~PlanetScale account~~
+- Vercel account
 - Stripe account
 
 1. Clone the repository
@@ -108,7 +112,7 @@ NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY and CLERK_SECRET_KEY from Clerk.
 
 The SIGN_IN_URL through to SIGN_UP_URL can all stay the same.
 
-DATA_URL from PlanetScale.
+POSTGRES_PRISMA_URL and POSTGRES_URL_NON_POOLING from Vercel (you can find this in your connected projects Settings -> Environment Variables)
 
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME from Cloudinary.
 
